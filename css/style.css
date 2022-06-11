@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: silver;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  max-width: 90%;
+  margin: 50px auto;
+}
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.posts_element {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+.posts_info h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 5px;
+  line-height: 30px;
+  flex-grow: 1;
+  margin-bottom: auto;
+}
+.posts_info h2 a {
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.55px;
+}
+.posts_info h2 a:hover {
+  color: steelblue;
+}
+.posts_info {
+  box-sizing: border-box;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.posts_date {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 30px;
+  letter-spacing: 0.325px;
+}
+.posts_element > img {
+  display: block;
+  width: 100%;
+}
+.posts_author {
+  margin-top: 60px;
+}
+.posts_element_big {
+  flex-basis: 65%;
+  position: relative;
+}
+.posts_element_big .posts_info {
+  position: absolute;
+  left: 0;
+  top: 400px;
+  padding: 0 25px;
+  z-index: 1;
+}
+.posts_element_big .posts_info a {
+  color: white;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: 0.75px;
+}
+.posts_element_big img {
+  flex-grow: 1;
+  filter: brightness(0.5);
+}
+@media screen and (max-width: 980px) {
+  .posts_date {
+    font-size: 12px;
+  }
+  .posts_info h2 a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .posts_info a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .posts_element_big .posts_info a {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .posts_element {
+    flex-basis: 49%;
+  }
+  .posts_element_big img {
+    flex-grow: 0;
+    filter: none;
+  }
+  .posts_element_big .posts_info {
+    position: static;
+    left: auto;
+    top: auto;
+  }
+  .posts_element_big .posts_info a {
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .posts_element_big .posts_info {
+    padding: 10px 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .posts_element {
+    flex-basis: 100%;
+  }
+}
